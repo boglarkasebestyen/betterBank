@@ -30,11 +30,8 @@ function Login() {
 	*/
 
 	//redirects me to Create Account when clicking "Open Account" in Login 
-	//but doesn't highlight on which nav tab I'm on
 	const history = useHistory();
   const redirect = () => {
-    // history.push('/createAccount');
-		// using the href from Navigation, not the "path" I was thinking I need: {id:"createAccount", text: "Open Acount", tooltipText: "Open your BetterBank® account", href:"#/createAccount"}
 		// I don't want to be able to go back in the browser:
 		history.replace('/createAccount');
   }
@@ -45,7 +42,6 @@ function Login() {
 			header="Account log in"
 			body={
 				<>
-				{/* it can't be done with if/else or without else */} 
 					{(() => {
 						if (userNameError) {
 							return (

@@ -16,7 +16,6 @@ function NavBar() {
   /* Highlight the current page the user is on / active page, even on refresh */
   const location = useLocation();
   
-  // an array of objects; pages[classIndex] is enough to access it
   const pages = [{id:"login", text: "Login", tooltipText: "Log in to your account", href:"#/"},
                 {id:"createAccount", text: "Open Acount", tooltipText: "Open your BetterBank® account", href:"#/createAccount"},                
                 {id:"deposit",text: "Deposit", tooltipText: "Deposit cash & checks on any device", href:"#/deposit"},
@@ -34,7 +33,6 @@ function NavBar() {
     <>   
       <div className="blurr">
         <nav className="navbar navbar-expand-lg navbar-light">
-          {/* <div className="username">{userName}</div> */}
           <a href={{Login}} className="navbar-brand mt-1 ml-5">
             <img src={logo} className="banklogo" alt="BetterBank"/>
           </a>
@@ -45,11 +43,7 @@ function NavBar() {
               <span className="navbar-toggler-icon"></span> 
             </button>
 
-            {/*  container containing nav items from item 1 till length of page */}
             <div className="collapse navbar-collapse nav-container" id="navbarNav">
-
-              {/* container containing each nav item only */}
-              {/* ml-auto will align the items to the right */}
               <ul className="navbar-nav navitem-container ml-auto">
 
                 {/* nav items: */}
@@ -63,7 +57,6 @@ function NavBar() {
                     <ReactTooltip id={item.id} effect='solid'>
                       <span>{item.tooltipText}</span>
                     </ReactTooltip>
-                    {/* note to self: data-for={item.id} and ReactTooltip id={item.id} need to be the same */}
                   </li>
                 )}
               </ul>

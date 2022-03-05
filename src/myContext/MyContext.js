@@ -272,15 +272,6 @@ function MyContextProvider({children}) {
 	};
 
     //FORM INPUT  
-    // const handleNameChange = e => {
-	// 		// setName(e.currentTarget.value); //if there's no letter validation
-	// 		let newName = e.currentTarget.value;
-	// 		if (!newName || validateName(newName)) {
-	// 				setName(newName);
-	// 		}
-    // }; -->
-
-	//works
 	const handleFirstNameChange = e => {
 		// setName(e.currentTarget.value); //if there's no letter validation
 		let newFirstName = e.currentTarget.value;
@@ -289,7 +280,6 @@ function MyContextProvider({children}) {
 		}
 	};
 
-	//works
 	const handleLastNameChange = e => {
 		// setName(e.currentTarget.value); //if there's no letter validation
 		let newLastName = e.currentTarget.value;
@@ -397,7 +387,6 @@ function MyContextProvider({children}) {
 	// clear successful deposit & withdraw message for OK button
 	let clearMsgDeposit = () => {
 		setDepositSuccessMessageVisible(false);
-		// setDepositAmount(0.0); --> not doing it & probly not a good idea 
 	}
 
     let showSuccessMessageDeposit = () => {
@@ -473,8 +462,8 @@ function MyContextProvider({children}) {
 
 	let clearMsgWithdraw = () => {
 		setWithdrawSuccessMessageVisible(false);
-		// setWithdrawAmount(0.0); --> not doing it & probly not a good idea 
 	}
+	
     let showSuccessMessageWithdraw = () => {
 			if (withdrawSuccessMessageVisible) {
 					return (
